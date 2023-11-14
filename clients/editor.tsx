@@ -139,16 +139,7 @@ export default function App() {
                       );
                     }}
                   >
-                    <img
-                      style={{
-                        marginTop: -16,
-                        position: "relative",
-                        top: 11,
-                        height: 32,
-                      }}
-                      src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
-                      alt="Buy Me A Coffee"
-                    />
+
                   </a>
                   <Button type="primary" onClick={submit}>
                     Save
