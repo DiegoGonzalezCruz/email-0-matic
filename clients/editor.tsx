@@ -126,21 +126,10 @@ export default function App() {
             <PageHeader
               style={{ background: "var(--color-bg-2)" }}
               title="Edit"
+              className={'debug1'}
               extra={
                 <Space>
-                  <a
-                    href="https://www.buymeacoffee.com/easyemail?utm_source=webside&utm_medium=button&utm_content=donate"
-                    target="_blank"
-                    onClick={(ev) => {
-                      ev.preventDefault();
-                      window.open(
-                        "https://www.buymeacoffee.com/easyemail?utm_source=webside&utm_medium=button&utm_content=donate",
-                        "_blank"
-                      );
-                    }}
-                  >
 
-                  </a>
                   <Button type="primary" onClick={submit}>
                     Save
                   </Button>
