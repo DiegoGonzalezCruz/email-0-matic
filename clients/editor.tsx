@@ -106,8 +106,26 @@ export default function App() {
     });
   }, []);
 
-  const onSubmit: Config<IEmailTemplate>["onSubmit"] = (values) => {
+  const onSubmit: Config<IEmailTemplate>["onSubmit"] = async (values) => {
     console.log(values);
+    const appId = "2b64851b-1e9d-4df9-ba9f-4679291bf059";
+    const publicKey = "18ad3d82-a666-44c7-a345-f32ef7e84b13";
+    const secretKey = "af7b3a7f-190e-4059-b1b6-995211def55d";
+
+    const res = await axios.post(
+      "https://api.mjml.io/v1/render",
+      { mjml: JSON.stringify(values) },
+      {
+        headers: {
+          Authorization: `Basic ${Buffer.from(`${appId}:${publicKey}`).toString(
+            "base64"
+          )}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    console.log(res, "res***********");
   };
 
   if (!template) return <Spin />;
@@ -126,10 +144,9 @@ export default function App() {
             <PageHeader
               style={{ background: "var(--color-bg-2)" }}
               title="Edit"
-              className={'debug1'}
+              className={"debug1"}
               extra={
                 <Space>
-
                   <Button type="primary" onClick={submit}>
                     Save
                   </Button>
