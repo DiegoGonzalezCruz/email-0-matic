@@ -23,6 +23,8 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "final-form": "^4.20.10",
+    "json2mjml": "^1.0.3",
+    "mjml": "^4.14.1",
     "mjml-browser": "^4.14.1",
     "next": "^14.0.2",
     "postcss": "^8.4.31",
@@ -32,5 +34,8 @@
     "react-use": "^17.4.0",
     "tailwindcss": "^3.3.5",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "daisyui": "^4.0.7"
   }
 }
