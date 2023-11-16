@@ -38,6 +38,7 @@ import "@arco-themes/react-easy-email-theme/css/arco.css";
 import axios from "axios";
 import { Config } from "final-form";
 import { data } from "autoprefixer";
+import Image from "next/image";
 
 const defaultCategories: ExtensionProps["categories"] = [
   {
@@ -169,6 +170,12 @@ export default function App() {
               extra={
                 <div className="flex flex-row gap-5 ">
                   <Space>
+                    <Image
+                      alt="logo"
+                      src="/logo.png"
+                      width={100}
+                      height={100}
+                    />
                     <Button type="primary" onClick={submit}>
                       Render HTML
                     </Button>
