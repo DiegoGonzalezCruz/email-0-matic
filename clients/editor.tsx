@@ -170,7 +170,7 @@ export default function App() {
                 <div className="flex flex-row gap-5 ">
                   <Space>
                     <Button type="primary" onClick={submit}>
-                      Save
+                      Render HTML
                     </Button>
                   </Space>
                 </div>

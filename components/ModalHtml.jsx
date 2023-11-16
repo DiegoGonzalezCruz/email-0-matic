@@ -17,7 +17,7 @@ const ModalHtml = ({ data, isOpen = false, onClose }) => {
             className="mockup-code"
             dangerouslySetInnerHTML={{ __html: data.html }}
           />
-          {data.html}
+          <pre>{data.html}</pre>
         </div>
         <button className="btn btn-secondary" onClick={onClose}>
           Close
